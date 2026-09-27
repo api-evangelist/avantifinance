@@ -1,0 +1,62 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 3
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.co.nz
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: api.co.nz
+  role: api
+  relation: other-domain
+- host: app.avantifinance.co.nz
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: avantifinance.co.nz
+  role: other
+  relation: own
+- host: introducers.avantifinance.co.nz
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: avantifinance.co.nz
+  role: other
+  relation: own
+- host: www.avantifinance.co.nz
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Newsroom
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: avantifinance.co.nz
+  role: website
+  relation: own

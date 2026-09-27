@@ -1,23 +1,67 @@
 aid: avantifinance
+
 name: Avantifinance
-description: 'Avantifinance is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Avantifinance is a financial technology company that aims to provide innovative lending solutions for underserved markets. The company focuses on leveraging data-driven underwriting and digital platforms to streamline loan applications, approvals, and servicing. As a relatively new entrant, Avantifinance is building its API ecosystem to enable partners and developers to integrate financing options into their services, though public API documentation is not yet available. The firm targets small and medium enterprises in emerging economies, offering flexible credit terms and real-time decisioning powered by machine learning models. Its platform includes APIs for loan origination, repayment tracking, and compliance reporting, positioning Avantifinance as a modern fintech bridge between lenders and borrowers.'
+
 url: https://raw.githubusercontent.com/api-evangelist/avantifinance/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- FinTech
+- Lending
+- API
+- Data-Driven
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/avantifinance-hosts.yml
+- type: Vendors
+  url: vendors/avantifinance-vendors.yml
+- type: TermsOfService
+  url: https://www.avantifinance.co.nz/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.avantifinance.co.nz/privacy
+- type: Newsroom
+  url: https://www.avantifinance.co.nz/news-insights/news/non-bank-of-the-year-2023/
+- type: DomainSecurity
+  url: security/avantifinance-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/avantifinance
+  url: https://www.avantifinance.co.nz
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: >-
+    The provider's API host https://api.co.nz returns HTML shells for typical OpenAPI URLs, offering no machine‑readable contract.
+  evidence:
+    - url: https://api.co.nz/openapi.json
+      status: 200
+  checked: '2026-09-26'
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
