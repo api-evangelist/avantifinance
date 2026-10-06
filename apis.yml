@@ -17,7 +17,7 @@ specificationVersion: '0.20'
 
 created: '2026-09-26'
 
-modified: '2026-09-26'
+modified: '2026-10-06'
 
 tags:
 - Company
@@ -38,6 +38,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- url: https://www.avantifinance.co.nz/feed/
+  type: BlogRSS
 - type: Hosts
   url: hosts/avantifinance-hosts.yml
 - type: Vendors
